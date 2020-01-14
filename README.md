@@ -18,6 +18,11 @@ Kernel configuration for optimization of Fujitsu Futro S700
 |dmesg-DEBUG  |`dmesg` output on current modified kernel configuration|
 |S700KERNCONF |Modified kernel configuration file                     |
 
+## Flags in configuration:
+| Flag   | Description                               |
+| :---:  | :---:                                     |
+|MODIFYME|Option which is user dependent             |
+|CHECKME |Check if changing this value boots properly|
 
 ## Resources:
  - [how to reduce kernel size - NetBSD wiki](https://wiki.netbsd.org/tutorials/how_to_reduce_kernel_size/)
