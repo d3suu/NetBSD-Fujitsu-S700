@@ -684,6 +684,13 @@ ahcisata* at pci? dev ? function ?	# AHCI SATA controllers
 
 # ATA (IDE) bus support
 #atabus* at ata?	# CHECKME - atabus0,1,2,3,4,5 comes from ahcisata0
+# FIX CHECKME
+atabus0 at ahcisata0 channel 0
+atabus1 at ahcisata0 channel 1
+atabus2 at ahcisata0 channel 2
+atabus3 at ahcisata0 channel 3
+atabus4 at ahcisata0 channel 4
+atabus5 at ahcisata0 channel 5
 #options 	ATADEBUG
 
 # IDE drives
