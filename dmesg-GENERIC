@@ -1,0 +1,278 @@
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 8.1 (GENERIC) #0: Fri May 31 08:43:59 UTC 2019
+	mkrepro@mkrepro.NetBSD.org:/usr/src/sys/arch/amd64/compile/GENERIC
+total memory = 733 MB
+avail memory = 689 MB
+rnd: seeded with 128 bits
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+running cgd selftest aes-xts-256 aes-xts-512 done
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+FUJITSU FUTRO S700 (                      )
+mainbus0 (root)
+ACPI: RSDP 0x00000000000F0450 000024 (v02 FTS   )
+ACPI: XSDT 0x000000002DC04068 000054 (v01 FTS    D3003-B1 01072009 AMI  00010013)
+ACPI: FACP 0x000000002DC099C8 0000F4 (v04 FTS    D3003-B1 01072009 AMI  00010013)
+ACPI BIOS Warning (bug): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20170303/tbfadt-693)
+ACPI: DSDT 0x000000002DC04150 005878 (v02 FTS    D3003-B1 00000000 INTL 20091112)
+ACPI: FACS 0x000000002E4B2F80 000040
+ACPI: APIC 0x000000002DC09AC0 000062 (v03 FTS    D3003-B1 01072009 AMI  00010013)
+ACPI: MCFG 0x000000002DC09B28 00003C (v01 FTS    D3003-B1 01072009 MSFT 00010013)
+ACPI: HPET 0x000000002DC09B68 000038 (v01 FTS    D3003-B1 01072009 AMI  00000004)
+ACPI: SSDT 0x000000002DC09BA0 00017A (v01 AMD    POWERNOW 00000001 AMD  00000001)
+ACPI: SSDT 0x000000002DC09D20 00168E (v02 AMD    ALIB     00000001 MSFT 04000000)
+ACPI: Executed 4 blocks of module-level executable AML code
+ACPI: 3 ACPI AML tables successfully acquired and loaded
+ioapic0 at mainbus0 apid 2: pa 0xfec00000, version 0x21, 24 pins
+cpu0 at mainbus0 apid 0
+cpu0: AMD G-T44R Processor, id 0x500f20
+cpu0: package 0, core 0, smt 0
+acpi0 at mainbus0: Intel ACPICA 20170303
+acpi0: X/RSDT: OemId <FTS   ,D3003-B1,01072009>, AslId <AMI ,00010013>
+acpi0: MCFG: segment 0, bus 0-63, address 0x00000000f8000000
+acpi0: SCI interrupting at int 9
+timecounter: Timecounter "ACPI-Fast" frequency 3579545 Hz quality 1000
+hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+timecounter: Timecounter "hpet0" frequency 14318180 Hz quality 2000
+AMDN (PNP0C01) at acpi0 not configured
+S800 (PNP0C02) at acpi0 not configured
+SIO1 (PNP0C02) at acpi0 not configured
+UAR1 (PNP0501) at acpi0 not configured
+attimer1 at acpi0 (TMR, PNP0100): io 0x40-0x43 irq 0
+pcppi1 at acpi0 (SPKR, PNP0800): io 0x61
+spkr0 at pcppi1: PC Speaker
+midi0 at pcppi1: PC speaker
+sysbeep0 at pcppi1
+RMSC (PNP0C02) at acpi0 not configured
+NBRM (PNP0C02) at acpi0 not configured
+pckbc1 at acpi0 (PS2K, PNP0303) (kbd port): io 0x60,0x64 irq 1
+pckbc2 at acpi0 (PS2M, PNP0F03) (aux port): irq 12
+BROD (PNP0C02) at acpi0 not configured
+acpibut0 at acpi0 (PWRB, PNP0C0C-170): ACPI Power Button
+RMEM (PNP0C01) at acpi0 not configured
+OMSC (PNP0C02) at acpi0 not configured
+ACPI: Enabled 1 GPEs in block 00 to 1F
+attimer1: attached to pcppi1
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+pchb0 at pci0 dev 0 function 0: vendor 1022 product 1510 (rev. 0x00)
+radeon0 at pci0 dev 1 function 0: vendor 1002 product 9805 (rev. 0x00)
+hdaudio0 at pci0 dev 1 function 1: HD Audio Controller
+hdaudio0: interrupting at msi0 vec 0
+hdafg0 at hdaudio0: vendor 1002 product aa01
+hdafg0: HDMI00 2ch: Digital Out [Jack]
+hdafg0: 2ch/0ch 32000Hz 44100Hz 48000Hz PCM16 AC3
+ppb0 at pci0 dev 4 function 0: vendor 1022 product 1512 (rev. 0x00)
+ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x1 @ 2.5GT/s
+pci1 at ppb0 bus 1
+pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+re0 at pci1 dev 0 function 0: RealTek 8168/8111 PCIe Gigabit Ethernet (rev. 0x06)
+re0: interrupting at msi1 vec 0
+re0: Ethernet address 90:1b:0e:03:26:c6
+re0: using 256 tx descriptors
+rgephy0 at re0 phy 7: RTL8169S/8110S/8211 1000BASE-T media interface, rev. 4
+rgephy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-FDX, auto
+ahcisata0 at pci0 dev 17 function 0: vendor 1002 product 4391 (rev. 0x40)
+ahcisata0: interrupting at ioapic0 pin 19
+ahcisata0: 64-bit DMA
+ahcisata0: AHCI revision 1.20, 6 ports, 32 slots, CAP 0xf732ff05<PSC,SSC,PMD,SPM,ISS=0x3=Gen3,SCLO,SAL,SALP,SMPS,SSNTF,SNCQ,S64A>
+atabus0 at ahcisata0 channel 0
+atabus1 at ahcisata0 channel 1
+atabus2 at ahcisata0 channel 2
+atabus3 at ahcisata0 channel 3
+atabus4 at ahcisata0 channel 4
+atabus5 at ahcisata0 channel 5
+ohci0 at pci0 dev 18 function 0: vendor 1002 product 4397 (rev. 0x00)
+ohci0: interrupting at ioapic0 pin 18
+ohci0: OHCI version 1.0, legacy support
+usb0 at ohci0: USB revision 1.0
+ehci0 at pci0 dev 18 function 2: vendor 1002 product 4396 (rev. 0x00)
+ehci0: interrupting at ioapic0 pin 17
+ehci0: dropped intr workaround enabled
+ehci0: BIOS has given up ownership
+ehci0: EHCI version 1.0
+ehci0: 1 companion controller, 5 ports: ohci0
+usb1 at ehci0: USB revision 2.0
+ohci1 at pci0 dev 19 function 0: vendor 1002 product 4397 (rev. 0x00)
+ohci1: interrupting at ioapic0 pin 18
+ohci1: OHCI version 1.0, legacy support
+usb2 at ohci1: USB revision 1.0
+ehci1 at pci0 dev 19 function 2: vendor 1002 product 4396 (rev. 0x00)
+ehci1: interrupting at ioapic0 pin 17
+ehci1: dropped intr workaround enabled
+ehci1: BIOS has given up ownership
+ehci1: EHCI version 1.0
+ehci1: 1 companion controller, 5 ports: ohci1
+usb3 at ehci1: USB revision 2.0
+piixpm0 at pci0 dev 20 function 0: vendor 1002 product 4385 (rev. 0x42)
+piixpm0: polling (SB800)
+iic0 at piixpm0: I2C bus
+iic1 at piixpm0: I2C bus
+iic2 at piixpm0: I2C bus
+iic3 at piixpm0: I2C bus
+hdaudio1 at pci0 dev 20 function 2: HD Audio Controller
+hdaudio1: interrupting at ioapic0 pin 16
+hdafg1 at hdaudio1: vendor 10ec product 0663
+hdafg1: DAC00 2ch: Speaker [Jack], HP Out [Jack]
+hdafg1: ADC02 2ch: Line In [Jack], Mic In [Jack]
+hdafg1: 2ch/2ch 44100Hz 48000Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+audio0 at hdafg1: full duplex, playback, capture, mmap, independent
+hdafg1: Virtual format configured - Format SLINEAR, precision 16, channels 2, frequency 48000
+hdafg1: Latency: 128 milliseconds
+spkr1 at audio0: PC Speaker (synthesized)
+pcib0 at pci0 dev 20 function 3: vendor 1002 product 439d (rev. 0x40)
+ppb1 at pci0 dev 20 function 4: vendor 1002 product 4384 (rev. 0x40)
+pci2 at ppb1 bus 2
+pci2: i/o space, memory space enabled
+ohci2 at pci0 dev 20 function 5: vendor 1002 product 4399 (rev. 0x00)
+ohci2: interrupting at ioapic0 pin 18
+ohci2: OHCI version 1.0, legacy support
+usb4 at ohci2: USB revision 1.0
+ohci3 at pci0 dev 22 function 0: vendor 1002 product 4397 (rev. 0x00)
+ohci3: interrupting at ioapic0 pin 18
+ohci3: OHCI version 1.0, legacy support
+usb5 at ohci3: USB revision 1.0
+ehci2 at pci0 dev 22 function 2: vendor 1002 product 4396 (rev. 0x00)
+ehci2: interrupting at ioapic0 pin 17
+ehci2: dropped intr workaround enabled
+ehci2: BIOS has given up ownership
+ehci2: EHCI version 1.0
+ehci2: 1 companion controller, 4 ports: ohci3
+usb6 at ehci2: USB revision 2.0
+pchb1 at pci0 dev 24 function 0: vendor 1022 product 1700 (rev. 0x43)
+pchb2 at pci0 dev 24 function 1: vendor 1022 product 1701 (rev. 0x00)
+pchb3 at pci0 dev 24 function 2: vendor 1022 product 1702 (rev. 0x00)
+amdnb_misc0 at pci0 dev 24 function 3: AMD NB Misc Configuration
+amdtemp0 at amdnb_misc0: AMD CPU Temperature Sensors (Family14h)
+pchb4 at pci0 dev 24 function 4: vendor 1022 product 1704 (rev. 0x00)
+pchb5 at pci0 dev 24 function 5: vendor 1022 product 1718 (rev. 0x00)
+pchb6 at pci0 dev 24 function 6: vendor 1022 product 1716 (rev. 0x00)
+pchb7 at pci0 dev 24 function 7: vendor 1022 product 1719 (rev. 0x00)
+isa0 at pcib0
+lpt0 at isa0 port 0x378-0x37b irq 7
+com0 at isa0 port 0x3f8-0x3ff irq 4: ns16550a, working fifo
+com0: console
+com1 at isa0 port 0x2f8-0x2ff irq 3: ns16550a, working fifo
+fdc0 at isa0 port 0x3f0-0x3f7 irq 6 drq 2
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: HLT, lat   0 us, pow     0 mW
+acpicpu0: C2: I/O, lat 100 us, pow     0 mW
+acpicpu0: P0: FFH, lat   1 us, pow  3430 mW, 1200 MHz
+acpicpu0: P1: FFH, lat   1 us, pow  2700 mW,  800 MHz
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "TSC" frequency 1197492080 Hz quality 3000
+IPsec: Initialized Security Association Processing.
+uhub0 at usb0: vendor 1002 (0x1002) OHCI root hub (0000), class 9/0, rev 1.00/1.00, addr 1
+uhub0: 5 ports with 5 removable, self powered
+uhub1 at usb1: vendor 1002 (0x1002) EHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 1
+uhub1: 5 ports with 5 removable, self powered
+uhub2 at usb2: vendor 1002 (0x1002) OHCI root hub (0000), class 9/0, rev 1.00/1.00, addr 1
+uhub2: 5 ports with 5 removable, self powered
+uhub3 at usb3: vendor 1002 (0x1002) EHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 1
+uhub3: 5 ports with 5 removable, self powered
+uhub4 at usb4: vendor 1002 (0x1002) OHCI root hub (0000), class 9/0, rev 1.00/1.00, addr 1
+uhub4: 2 ports with 2 removable, self powered
+uhub5 at usb5: vendor 1002 (0x1002) OHCI root hub (0000), class 9/0, rev 1.00/1.00, addr 1
+uhub5: 4 ports with 4 removable, self powered
+uhub6 at usb6: vendor 1002 (0x1002) EHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 1
+uhub6: 4 ports with 4 removable, self powered
+ahcisata0 port 0: device present, speed: 1.5Gb/s
+ahcisata0 port 4: device present, speed: 3.0Gb/s
+wd0 at atabus0 drive 0
+wd0: <WDC WD800BEVS-22RST0>
+wd0: drive supports 16-sector PIO transfers, LBA48 addressing
+wd0: 76319 MB, 155061 cyl, 16 head, 63 sec, 512 bytes/sect x 156301488 sectors
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133)
+wd0(ahcisata0:0:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA)
+wd1 at atabus4 drive 0
+wd1: <SFSA1024U1BR2-C-MS-226-FTS-TO>
+wd1: drive supports 1-sector PIO transfers, LBA addressing
+wd1: 951 MB, 1933 cyl, 16 head, 63 sec, 512 bytes/sect x 1948464 sectors
+wd1: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133)
+wd1(ahcisata0:4:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA)
+pad0: outputs: 44100Hz, 16-bit, stereo
+audio1 at pad0: half duplex, playback, capture, mmap
+pad0: Virtual format configured - Format SLINEAR, precision 16, channels 2, frequency 44100
+pad0: Latency: 139 milliseconds
+spkr2 at audio1: PC Speaker (synthesized)
+boot device: wd1
+root on wd1a dumps on wd1b
+root file system type: ffs
+kern.module.path=/stand/amd64/8.1/modules
+drm: initializing kernel modesetting (PALM 0x1002:0x9805 0x1734:0x11BD).
+drm: register mmio base: 0xfeb00000
+drm: register mmio size: 262144
+drm kern info: ATOM BIOS: AMD
+radeon0: info: VRAM: 256M 0x0000000000000000 - 0x000000000FFFFFFF (256M used)
+radeon0: info: GTT: 1024M 0x0000000010000000 - 0x000000004FFFFFFF
+drm: Detected VRAM RAM=100M, BAR=256M
+drm: RAM width 32bits DDR
+Zone  kernel: Available graphics memory: 9007199254721910 kiB
+drm: radeon: 256M of VRAM memory ready
+drm: radeon: 1024M of GTT memory ready.
+drm: Loading PALM Microcode
+WARNING: clock gained 32 days
+drm: Internal thermal controller without fan control
+drm: Found smc ucode version: 0x00010601
+drm: radeon: dpm initialized
+drm: GART: num cpu pages 262144, num gpu pages 262144
+drm: PCIE GART of 1024M enabled (table at 0x0000000000273000).
+radeon0: info: WB enabled
+radeon0: info: fence driver on ring 0 use gpu addr 0x0000000010000c00 and cpu addr 0x0xffff80002d8a4c00
+radeon0: info: fence driver on ring 3 use gpu addr 0x0000000010000c0c and cpu addr 0x0xffff80002d8a4c0c
+radeon0: info: fence driver on ring 5 use gpu addr 0x0000000000072118 and cpu addr 0x0xffff80002d8f2118
+drm: Supports vblank timestamp caching Rev 2 (21.10.2013).
+drm: Driver supports precise vblank timestamp query.
+radeon0: interrupting at ioapic0 pin 18 (radeon)
+drm: radeon: irq initialized.
+drm: ring test on 0 succeeded in 1 usecs
+drm: ring test on 3 succeeded in 1 usecs
+drm: ring test on 5 succeeded in 1 usecs
+drm: UVD initialized successfully.
+drm: ib test on ring 0 succeeded in 0 usecs
+drm: ib test on ring 3 succeeded in 0 usecs
+drm: ib test on ring 5 succeeded
+drm: Radeon Display Connectors
+drm: Connector 0:
+drm:   DP-1
+drm:   HPD1
+drm:   DDC: 0x6430 0x6430 0x6434 0x6434 0x6438 0x6438 0x643c 0x643c
+drm:   Encoders:
+drm:     DFP1: INTERNAL_UNIPHY
+drm: Connector 1:
+drm:   DVI-D-1
+drm:   HPD2
+drm:   DDC: 0x6440 0x6440 0x6444 0x6444 0x6448 0x6448 0x644c 0x644c
+drm:   Encoders:
+drm:     DFP2: INTERNAL_UNIPHY
+drm: Connector 2:
+drm:   VGA-1
+drm:   DDC: 0x6440 0x6440 0x6444 0x6444 0x6448 0x6448 0x644c 0x644c
+drm:   Encoders:
+drm:     CRT1: INTERNAL_KLDSCP_DAC1
+radeon0: info: No connectors reported connected with modes
+drm: Cannot find any crtc or sizes - going 1024x768
+radeondrmkmsfb0 at radeon0
+radeon0: info: registered panic notifier
+radeondrmkmsfb0: framebuffer at 0xffff80002df13000, size 1024x768, depth 32, stride 4096
+wsdisplay0 at radeondrmkmsfb0 kbdmux 1
+wsmux1: connecting to wsdisplay0
+wsdisplay0: screen 1 added (default, vt100 emulation)
+wsdisplay0: screen 2 added (default, vt100 emulation)
+wsdisplay0: screen 3 added (default, vt100 emulation)
+wsdisplay0: screen 4 added (default, vt100 emulation)
+/dev/wd0: file system not clean; please fsck(8)
+
