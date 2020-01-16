@@ -3,7 +3,7 @@ Kernel configuration for optimization of Fujitsu Futro S700
 
 > Warning! License may change due to lack of header in GENERIC configuration from syssrc.tgz file
 
-## Long term goals goals:
+## Long term goals:
  - Smaller file size of NetBSD kernel
  - Lower CPU usage
  - Lower memory usage
@@ -23,6 +23,14 @@ Kernel configuration for optimization of Fujitsu Futro S700
 | :---:  | :---:                                     |
 |MODIFYME|Option which is user dependent             |
 |CHECKME |Check if changing this value boots properly|
+
+## Differences:
+|                   | GENERIC  | S700KERNCONF |
+| :---:             | :---:    | :---:        |
+| Size (bytes)      | 24880560 | 12601504     |
+| Boot time (sec)   |          |              |
+| Mem. Load (bytes) |          |              |
+
 
 ## Resources:
  - [how to reduce kernel size - NetBSD wiki](https://wiki.netbsd.org/tutorials/how_to_reduce_kernel_size/)
