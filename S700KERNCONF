@@ -115,8 +115,8 @@ options 	KDTRACE_HOOKS	# kernel DTrace hooks
 #options 	COMPAT_11	# NetBSD 1.1,
 #options 	COMPAT_12	# NetBSD 1.2 (and 386BSD and BSDI),
 #options 	COMPAT_13	# NetBSD 1.3 (and 386BSD and BSDI),
-options 	COMPAT_14	# NetBSD 1.4,
-options 	COMPAT_15	# NetBSD 1.5,
+#options 	COMPAT_14	# NetBSD 1.4,
+#options 	COMPAT_15	# NetBSD 1.5,
 options 	COMPAT_16	# NetBSD 1.6,
 options 	COMPAT_20	# NetBSD 2.0,
 options 	COMPAT_30	# NetBSD 3.0,
@@ -127,11 +127,11 @@ options 	COMPAT_70	# NetBSD 7.0 binary compatibility.
 options 	COMPAT_43	# and 4.3BSD
 #options 	COMPAT_386BSD_MBRPART # recognize old partition ID
 
-options 	COMPAT_OSSAUDIO	# MODIFYME - User may or may not use audio
-options 	COMPAT_NETBSD32
-options 	COMPAT_LINUX
-options 	COMPAT_LINUX32	# req. COMPAT_LINUX and COMPAT_NETBSD32
-options 	EXEC_ELF32	# CHECKME - May need to uncomment EXEC_ELF32
+#options 	COMPAT_OSSAUDIO	# MODIFYME - User may or may not use audio
+#options 	COMPAT_NETBSD32
+#options 	COMPAT_LINUX
+#options 	COMPAT_LINUX32	# req. COMPAT_LINUX and COMPAT_NETBSD32
+#options 	EXEC_ELF32	# CHECKME - May need to uncomment EXEC_ELF32
 options 	COMPAT_BSDPTY	# /dev/[pt]ty?? ptys.
 
 # Wedge support
@@ -222,7 +222,7 @@ options 	IPFILTER_COMPAT # Compat for IP-Filter
 #options 	PCIVERBOSE	# verbose PCI device autoconfig messages
 #options 	PCI_CONFIG_DUMP	# verbosely dump PCI config space
 #options 	PCMCIAVERBOSE	# verbose PCMCIA configuration messages
-options 	SCSIVERBOSE	# human readable SCSI error messages
+#options 	SCSIVERBOSE	# human readable SCSI error messages
 #options 	USBVERBOSE	# verbose USB device autoconfig messages
 #options 	HDAUDIOVERBOSE	# verbose HDAUDIO driver messages
 
@@ -337,8 +337,8 @@ pcppi*		at acpi?		# AT-style speaker sound
 
 # PCI bus support # CHECKME
 pci*	at mainbus? bus ?
-pci*	at pchb? bus ?
-pci*	at ppb? bus ?
+#pci*	at pchb? bus ?
+#pci*	at ppb? bus ?
 
 # PCI bridges
 pchb*	at pci? dev ? function ?	# PCI-Host bridges
@@ -380,17 +380,17 @@ isa0	at pcib?
 # Console Devices
 
 # wscons
-pckbc0		at isa?			# pc keyboard controller	# CHECKME - Dmesg says there is only pckbc1 and 2 from acpi0
-pckbd*		at pckbc?		# PC keyboard
-pms*		at pckbc?		# PS/2 mouse for wsmouse
+#pckbc0		at isa?			# pc keyboard controller	# CHECKME - Dmesg says there is only pckbc1 and 2 from acpi0
+#pckbd*		at pckbc?		# PC keyboard
+#pms*		at pckbc?		# PS/2 mouse for wsmouse
 #options 	PMS_DISABLE_POWERHOOK	# Disable PS/2 reset on resume
 #options 	PMS_SYNAPTICS_TOUCHPAD	# Enable support for Synaptics Touchpads
 #options 	PMS_ELANTECH_TOUCHPAD	# Enable support for Elantech Touchpads
-vga*		at pci? dev ? function ?	# CHECKME
+#vga*		at pci? dev ? function ?	# CHECKME
 genfb*		at pci? dev ? function ?	# CHECKME
 options 	VCONS_DRAW_INTR
 wsdisplay*	at vga? console ?	# CHECKME
-wsdisplay*	at wsemuldisplaydev?	# CHECKME - wsdisplay0 comes from radeondrmkmsfb0, not vga or wsemuldisplaydev
+#wsdisplay*	at wsemuldisplaydev?	# CHECKME - wsdisplay0 comes from radeondrmkmsfb0, not vga or wsemuldisplaydev
 #wskbd*		at pckbd? console ?
 #wsmouse*	at pms? mux 0
 
