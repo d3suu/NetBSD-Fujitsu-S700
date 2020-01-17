@@ -386,11 +386,11 @@ isa0	at pcib?
 #options 	PMS_DISABLE_POWERHOOK	# Disable PS/2 reset on resume
 #options 	PMS_SYNAPTICS_TOUCHPAD	# Enable support for Synaptics Touchpads
 #options 	PMS_ELANTECH_TOUCHPAD	# Enable support for Elantech Touchpads
-#vga*		at pci? dev ? function ?	# CHECKME
-genfb*		at pci? dev ? function ?	# CHECKME
+vga*		at pci? dev ? function ?
+genfb*		at pci? dev ? function ?
 options 	VCONS_DRAW_INTR
-wsdisplay*	at vga? console ?	# CHECKME
-#wsdisplay*	at wsemuldisplaydev?	# CHECKME - wsdisplay0 comes from radeondrmkmsfb0, not vga or wsemuldisplaydev
+wsdisplay*	at vga? console ?
+wsdisplay*	at wsemuldisplaydev?
 #wskbd*		at pckbd? console ?
 #wsmouse*	at pms? mux 0
 
