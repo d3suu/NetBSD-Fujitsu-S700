@@ -15,7 +15,7 @@ Kernel configuration for optimization of Fujitsu Futro S700
 | :---:       | :---:                                                 |
 |README.md    |Readme file                                            |
 |dmesg-GENERIC|`dmesg` output on GENERIC kernel                       |
-|dmesg-DEBUG  |`dmesg` output on current modified kernel configuration|
+|atf-debug    |`atf-run` output on new kernel                         |
 |S700KERNCONF |Modified kernel configuration file                     |
 
 ## Flags in configuration:
@@ -27,9 +27,9 @@ Kernel configuration for optimization of Fujitsu Futro S700
 ## Differences:
 |                   | GENERIC  | S700KERNCONF |
 | :---:             | :---:    | :---:        |
-| Size (bytes)      | 24880560 | 12601504     |
-| Boot time (sec)   |          |              |
-| Mem. Load (bytes) |          |              |
+| Size (bytes)      | 24880560 | 12616192     |
+| Boot time (sec)   |    12.44 | 11.01        |
+| Mem. Load (bytes) |    2676k | 2700k        |
 
 
 ## Resources:
