@@ -8,7 +8,7 @@
 include 	"arch/amd64/conf/std.amd64"
 
 # MODIFYME - embed config file in kernel binary
-options 	INCLUDE_CONFIG_FILE	# embed config file in kernel binary
+#options 	INCLUDE_CONFIG_FILE	# embed config file in kernel binary
 
 ident		"S700KERNCONF-$Revision: 1.459.2.14 $"
 
@@ -69,12 +69,12 @@ options 	SPECTRE_V2_GCC_MITIGATION
 
 # CPU features
 acpicpu*	at cpu?		# ACPI CPU (including frequency scaling)
-#coretemp*	at cpu?		# Intel on-die thermal sensor # CHECKME
-#est0		at cpu0		# Intel Enhanced SpeedStep (non-ACPI) # CHECKME
-#hyperv0 	at cpu0		# Microsoft Hyper-V # CHECKME
+#coretemp*	at cpu?		# Intel on-die thermal sensor
+#est0		at cpu0		# Intel Enhanced SpeedStep (non-ACPI)
+#hyperv0 	at cpu0		# Microsoft Hyper-V
 #odcm0		at cpu0		# On-demand clock modulation
 powernow0	at cpu0		# AMD PowerNow! and Cool'n'Quiet (non-ACPI)
-#vmt0		at cpu0		# VMware Tools # CHECKME
+#vmt0		at cpu0		# VMware Tools
 
 options 	PMC		# performance-monitoring counters support
 
@@ -100,7 +100,7 @@ options 	DDB		# in-kernel debugger
 options 	DDB_HISTORY_SIZE=512	# enable history editing in DDB
 #options 	KGDB		# remote debugger
 #options 	KGDB_DEVNAME="\"com\"",KGDB_DEVADDR=0x3f8,KGDB_DEVRATE=9600
-makeoptions	DEBUG="-g"	# compile full symbol table for CTF # CHECKME - May later disable debugging
+makeoptions	DEBUG="-g"	# compile full symbol table for CTF # MODIFYME - May later disable debugging
 #options 	SYSCALL_STATS	# per syscall counts
 #options 	SYSCALL_TIMES	# per syscall times
 #options 	SYSCALL_TIMES_HASCOUNTER	# use 'broken' rdtsc (soekris)
@@ -131,7 +131,7 @@ options 	COMPAT_43	# and 4.3BSD
 #options 	COMPAT_NETBSD32
 #options 	COMPAT_LINUX
 #options 	COMPAT_LINUX32	# req. COMPAT_LINUX and COMPAT_NETBSD32
-#options 	EXEC_ELF32	# CHECKME - May need to uncomment EXEC_ELF32
+#options 	EXEC_ELF32
 options 	COMPAT_BSDPTY	# /dev/[pt]ty?? ptys.
 
 # Wedge support
@@ -270,8 +270,8 @@ config		netbsd	root on ? type ?
 # Device configuration
 #
 
-#IPMI support # CHECKME - This may be commented, need to check
-ipmi0		at mainbus?
+#IPMI support
+#ipmi0		at mainbus?
 
 # ACPI will be used if present. If not it will fall back to MPBIOS
 acpi0		at mainbus0
@@ -335,14 +335,14 @@ pcppi*		at acpi?		# AT-style speaker sound
 
 # Basic Bus Support
 
-# PCI bus support # CHECKME
+# PCI bus support
 pci*	at mainbus? bus ?
 #pci*	at pchb? bus ?
 #pci*	at ppb? bus ?
 
 # PCI bridges
 pchb*	at pci? dev ? function ?	# PCI-Host bridges
-#options 	AGP_X86 # CHECKME
+#options 	AGP_X86
 pcib*	at pci? dev ? function ?	# PCI-ISA bridges
 ppb*	at pci? dev ? function ?	# PCI-PCI bridges
 # XXX 'puc's aren't really bridges, but there's no better place for them here
@@ -380,7 +380,7 @@ isa0	at pcib?
 # Console Devices
 
 # wscons
-#pckbc0		at isa?			# pc keyboard controller	# CHECKME - Dmesg says there is only pckbc1 and 2 from acpi0
+#pckbc0		at isa?			# pc keyboard controller
 #pckbd*		at pckbc?		# PC keyboard
 #pms*		at pckbc?		# PS/2 mouse for wsmouse
 #options 	PMS_DISABLE_POWERHOOK	# Disable PS/2 reset on resume
@@ -683,8 +683,7 @@ ahcisata* at pci? dev ? function ?	# AHCI SATA controllers
 #wdc1	at isa? port 0x170 irq 15 flags 0x00
 
 # ATA (IDE) bus support
-#atabus* at ata?	# CHECKME - atabus0,1,2,3,4,5 comes from ahcisata0
-# FIX CHECKME
+#atabus* at ata?
 atabus0 at ahcisata0 channel 0
 atabus1 at ahcisata0 channel 1
 atabus2 at ahcisata0 channel 2
@@ -945,10 +944,10 @@ include "dev/usb/usbdevices.config"
 
 # High Definition Audio
 hdaudio*	at pci? dev ? function ?	# High Definition Audio
-#hdafg*		at hdaudiobus?	# CHECKME - hdafg1 comes from hdaudio1
+#hdafg*		at hdaudiobus?
 
 # Audio support
-#audio*	at audiobus?	# CHECKME - audiobus does not exist
+#audio*	at audiobus?
 
 # The spkr driver provides a simple tone interface to the built in speaker.
 #spkr*	at pcppi?		# PC speaker
